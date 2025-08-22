@@ -1,1 +1,1 @@
-# rule-based-deq
+# rule-based-deq audio samples
