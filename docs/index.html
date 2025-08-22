@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rule-Based DEQ Audio Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; /* remove default margins */
+      background-color: #f8f8f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center;     /* horizontal centering */
+      min-height: 100vh;       /* full viewport height */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+      background-color: cornflowerblue;
+      padding: 15px;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 95%;
+      max-width: 1000px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      table-layout: fixed; /* Equal column widths */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      width: 25%; /* 4 equal columns */
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    @media (max-width: 768px) {
+      table, th, td {
+        font-size: 14px;
+      }
+      audio {
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1> 🎚 Rule-Based DEQ Audio Samples 🎚</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Audio Type</th>
+        <th>Input</th>
+        <th>Processed</th>
+        <th>Target</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🥁 Drums</td>
+        <td><audio controls src="audio/input/Input_MS1331_Drums1NoDynEQ_MR0806.wav"></audio></td>
+        <td><audio controls src="audio/processed/Processed_MS1331_Drums1NoDynEQ_MR0806.wav"></audio></td>
+        <td><audio controls src="audio/target/Target_MS1331_Drums1NoDynEQ_MR0806.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>🎸 Bass</td>
+        <td><audio controls src="audio/input/Input_MS1333_Bass1NoDynEQ_MR1005.wav"></audio></td>
+        <td><audio controls src="audio/processed/Processed_MS1333_Bass1NoDynEQ_MR1005.wav"></audio></td>
+        <td><audio controls src="audio/target/Target_MS1333_Bass1NoDynEQ_MR1005.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>🎤 Vox1 (female vocals)</td>
+        <td><audio controls src="audio/input/Input_MS1335_Vox1NoDynEQ_MR0801.wav"></audio></td>
+        <td><audio controls src="audio/processed/Processed_MS1335_Vox1NoDynEQ_MR0801.wav"></audio></td>
+        <td><audio controls src="audio/target/Target_MS1335_Vox1NoDynEQ_MR0801.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>🎤 Vox2 (male vocals)</td>
+        <td><audio controls src="audio/input/Input_MS1337_Vox2NoDynEQ_MR0912.wav"></audio></td>
+        <td><audio controls src="audio/processed/Processed_MS1337_Vox2NoDynEQ_MR0912.wav"></audio></td>
+        <td><audio controls src="audio/target/Target_MS1337_Vox2NoDynEQ_MR0912.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
